@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'models/user.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 //API call is directly inside this FutureProvider.family
 final resumeProvider = FutureProvider.family<User, String>((ref, name) async {
