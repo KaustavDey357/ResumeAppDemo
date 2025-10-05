@@ -102,8 +102,3 @@ If you ever plan to use background location updates, you may also include:
 This project is open source and available under the [MIT License](LICENSE).
 
 ```
-
----
-
-✅ You can copy this entire block (including markdown formatting) and paste it directly into your `README.md` on GitHub — it will render perfectly.
-```
