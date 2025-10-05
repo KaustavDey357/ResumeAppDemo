@@ -36,8 +36,8 @@ class CustomizationControls extends ConsumerWidget {
                     max: 30,
                     divisions: 20,
                     value: fontSize,
-                    onChanged: (val) =>
-                        ref.read(fontSizeProvider.notifier).state = val,
+                    onChanged: (val) {
+                        ref.read(fontSizeProvider.notifier).state = val; my_box.put("fontSize",val);},
                   ),
                 ),
                 Text(fontSize.toStringAsFixed(0)),
