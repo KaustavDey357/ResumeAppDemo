@@ -14,7 +14,7 @@ class ResumeScreen extends ConsumerWidget {
     final bgColor = ref.watch(backgroundColorProvider);
 
     // fetch data directly from FutureProvider
-    final resumeAsync = ref.watch(resumeProvider('Karen'));
+    final resumeAsync = ref.watch(resumeProvider('Kaustav'));
 
     return Scaffold(
       appBar: AppBar(
