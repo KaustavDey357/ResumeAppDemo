@@ -25,7 +25,13 @@ class ResumeScreen extends ConsumerWidget {
             onPressed: () => ref.refresh(resumeProvider('Kaustav')),
             tooltip: 'Refresh Resume',
           ),
-        actions :[GetLocation();],
+        actions: [
+  Padding(
+    padding: const EdgeInsets.only(right: 8.0),
+    child: const GetLocation(),
+  ),
+],
+
       ),
       body: Container(
         color: bgColor,
