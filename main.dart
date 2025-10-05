@@ -4,6 +4,8 @@ import 'screens/resume_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
+  await Hive.init();
+  var box = Hive.openBox("newbox");
 }
 
 class MyApp extends StatelessWidget {
