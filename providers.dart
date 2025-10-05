@@ -17,8 +17,8 @@ final resumeProvider = FutureProvider.family<User, String>((ref, name) async {
     throw Exception('Failed to fetch resume (${response.statusCode})');
   }
 });
-
+final my_box = Hive.box("newbox");
 // UI state providers for customization
-final fontSizeProvider = StateProvider<double>((ref) => 16.0);
-final fontColorProvider = StateProvider<Color>((ref) => Colors.black);
-final backgroundColorProvider = StateProvider<Color>((ref) => Colors.white);
+final fontSizeProvider = StateProvider<double>((ref) => my_box.get("fontSize", defaultValue: 16.0));
+final fontColorProvider = StateProvider<Color>((ref) => Color(my_box.get("fontColor", defaultValue: Colors.black.valur)));
+final backgroundColorProvider = StateProvider<Color>((ref) => Colors(my_box.get("bgColor", defultValue: Colors.white.value)));
