@@ -101,4 +101,4 @@ If you ever plan to use background location updates, you may also include:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-```
+
