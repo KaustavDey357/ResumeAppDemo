@@ -40,6 +40,7 @@ Make sure you have location services enabled on your device or emulator.
 This app relies on the following packages:
 
 * `flutter_riverpod` — state management
+* `hive` — user configuration storage
 * `location` — to access device GPS coordinates
 * `app_settings` — to open device settings when permissions or services are disabled
 * (plus standard Flutter SDK dependencies)
