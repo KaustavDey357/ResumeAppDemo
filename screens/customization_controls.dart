@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class CustomizationControls extends ConsumerWidget {
   const CustomizationControls({super.key});
@@ -11,6 +12,7 @@ class CustomizationControls extends ConsumerWidget {
     final fontSize = ref.watch(fontSizeProvider);
     final fontColor = ref.watch(fontColorProvider);
     final backgroundColor = ref.watch(backgroundColorProvider);
+    final my_box = Hive.box("newbox");
 
     return Card(
       elevation: 4,
