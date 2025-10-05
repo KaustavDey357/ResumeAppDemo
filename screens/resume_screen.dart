@@ -13,7 +13,7 @@ class ResumeScreen extends ConsumerWidget {
     final fontColor = ref.watch(fontColorProvider);
     final bgColor = ref.watch(backgroundColorProvider);
 
-    // 👇 fetch data directly from FutureProvider
+    // fetch data directly from FutureProvider
     final resumeAsync = ref.watch(resumeProvider('Karen'));
 
     return Scaffold(
@@ -22,7 +22,7 @@ class ResumeScreen extends ConsumerWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
-            onPressed: () => ref.refresh(resumeProvider('Karen')),
+            onPressed: () => ref.refresh(resumeProvider('Kaustav')),
             tooltip: 'Refresh Resume',
           ),
         ],
