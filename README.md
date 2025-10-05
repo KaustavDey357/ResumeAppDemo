@@ -45,8 +45,6 @@ This app relies on the following packages:
 * `app_settings` — to open device settings when permissions or services are disabled
 * (plus standard Flutter SDK dependencies)
 
-Ensure these are listed in your `pubspec.yaml`.
-
 ---
 
 ## ⚙️ Android Permissions
