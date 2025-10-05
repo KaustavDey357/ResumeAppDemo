@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/user.dart';
 import '../providers.dart';
 import 'customization_controls.dart';
+import '../location.dart';
 
 class ResumeScreen extends ConsumerWidget {
   const ResumeScreen({super.key});
@@ -19,13 +20,12 @@ class ResumeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Resume Generator'),
-        actions: [
-          IconButton(
+        leading: IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () => ref.refresh(resumeProvider('Kaustav')),
             tooltip: 'Refresh Resume',
           ),
-        ],
+        actions :[GetLocation();],
       ),
       body: Container(
         color: bgColor,
