@@ -51,8 +51,12 @@ class CustomizationControls extends ConsumerWidget {
                 const Text("Font Color: "),
                 const SizedBox(width: 8),
                 GestureDetector(
-                  onTap: () {_pickColor(context, ref, fontColorProvider, fontColor); 
-await my_box.put("fontColor",fontColor.value);},
+                  onTap: () async {
+  await _pickColor(context, ref, fontColorProvider, fontColor);
+  final newColor = ref.read(fontColorProvider);
+  await my_box.put("fontColor", newColor.value);
+},
+
                   child: CircleAvatar(backgroundColor: fontColor),
                 ),
               ],
@@ -65,8 +69,13 @@ await my_box.put("fontColor",fontColor.value);},
                 const Text("Background: "),
                 const SizedBox(width: 8),
                 GestureDetector(
-                  onTap: () => _pickColor(
-                      context, ref, backgroundColorProvider, backgroundColor),
+                  
+onTap: () async {
+  await _pickColor(context, ref, backgroundColorProvider, backgroundColor);
+  final newColor = ref.read(backgroundColorProvider);
+  await my_box.put("bgColor", newColor.value);
+},
+
                   child: CircleAvatar(backgroundColor: backgroundColor),
                 ),
               ],
