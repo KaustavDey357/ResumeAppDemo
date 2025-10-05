@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:app_settings/app_settings.dart';
@@ -12,8 +13,8 @@ class GetLocation extends StatefulWidget {
 class _GetLocationState extends State<GetLocation> {
   double latitude = 0.0;
   double longitude = 0.0;
-  Location location = Location();
-  late final Stream<LocationData> _locationStream;
+  final Location location = Location();
+  StreamSubscription<LocationData>? _locationSubscription;
 
   @override
   void initState() {
@@ -26,9 +27,10 @@ class _GetLocationState extends State<GetLocation> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Text("Lat: ${latitude.toStringAsFixed(4)}"),
-        const SizedBox(width: 10),
-        Text("Lng: ${longitude.toStringAsFixed(4)}"),
+        Text(
+          "Lat: ${latitude.toStringAsFixed(4)}, Lng: ${longitude.toStringAsFixed(4)}",
+          style: const TextStyle(fontSize: 12, color: Colors.white),
+        ),
       ],
     );
   }
@@ -60,7 +62,7 @@ class _GetLocationState extends State<GetLocation> {
       }
     }
 
-    location.onLocationChanged.listen((LocationData currentLocation) {
+    _locationSubscription = location.onLocationChanged.listen((currentLocation) {
       setState(() {
         latitude = currentLocation.latitude ?? 0.0;
         longitude = currentLocation.longitude ?? 0.0;
@@ -81,6 +83,7 @@ class _GetLocationState extends State<GetLocation> {
                 AppSettings.openAppSettings();
               } else {
                 Navigator.pop(context);
+                getUserCurrentLocation(); // retry after enabling
               }
             },
             child: Text(buttonText),
@@ -88,5 +91,11 @@ class _GetLocationState extends State<GetLocation> {
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _locationSubscription?.cancel();
+    super.dispose();
   }
 }
