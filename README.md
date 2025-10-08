@@ -6,7 +6,7 @@ This project uses **Riverpod** for state management, a `GetLocation` widget for 
 
 ---
 **Important Note**
-The Resume Demo App is uploaded as a zip file and needs to be extracted to avail all of the file . *Do remember to clone the repo and extract the Resume Demo App file   .* 
+The Resume Demo App is uploaded as a zip file and needs to be extracted to avail all of the file . *Do remember to clone the repo and extract the Resume App Demo Zip file   .* 
 
 ---
 
