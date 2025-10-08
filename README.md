@@ -15,11 +15,11 @@ The Resume Demo App is uploaded as a zip file and needs to be extracted to avail
 1. **Clone the repository and Extract the Zip File:**
    ```bash
    git clone https://github.com/KaustavDey357/ResumeAppDemo.git
-   ```
-Extarct the Zip File , then:- 
-  ```
-   cd ResumeAppDemo
-```
+   
+   powershell -command "Expand-Archive -Force 'C:/the/path/you/cloned/the/repo' 'C:\destination\folder'"
+   
+   cd C:/the/destination/folder
+
 
 2. **Install dependencies:**
 
