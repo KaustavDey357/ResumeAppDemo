@@ -7,9 +7,7 @@ This project uses **Riverpod** for state management, a `GetLocation` widget for 
 ---
 
 **Live Demo Video**
-<video src="(./Screenrecorder-2025-10-08-22-16-51-641.mp4" controls width="640">
-  Your browser does not support the video tag.
-</video>
+[Watch this video](Screenrecorder-2025-10-08-22-16-51-641.mp4)
 
 
 
