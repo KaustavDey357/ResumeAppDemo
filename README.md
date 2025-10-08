@@ -6,12 +6,6 @@ This project uses **Riverpod** for state management, a `GetLocation` widget for 
 
 ---
 
-### Notes:
-- All **Dart source files** (e.g., `main.dart`, `location.dart`, your screens, models, and providers) must be placed inside the **lib/** folder.  
-- The **`pubspec.yaml`** file must be placed **outside** the lib folder, at the root of the project (alongside the `android/` and `ios/` directories). It was intended in this fashion as now you can directly git clone this repo in the lib folder , and move the pubspec.yaml file outside it making the cloning process less tedious .
-
----
-
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
