@@ -12,22 +12,26 @@ The Resume Demo App is uploaded as a zip file and needs to be extracted to avail
 
 ## 🚀 Getting Started
 
-1. **Clone the repository and Extract the Zip File:**
+1. **Clone the repository :**
    ```bash
    git clone https://github.com/KaustavDey357/ResumeAppDemo.git
-   
+
+2. **Extract the Zip File :**
+   ```bash
    powershell -command "Expand-Archive -Force 'C:/the/path/you/cloned/the/repo' 'C:\destination\folder'"
-   
+
+3. **Cd To where the file was extracted:**
+   ```bash
    cd C:/the/destination/folder
 
 
-2. **Install dependencies:**
+4. **Install dependencies:**
 
    ```bash
    flutter pub get
    ```
 
-3. **Run the app:**
+5. **Run the app:**
 
    ```bash
    flutter run
