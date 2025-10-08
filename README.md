@@ -7,7 +7,7 @@ This project uses **Riverpod** for state management, a `GetLocation` widget for 
 ---
 
 **Live Demo Video**
-[![Watch the video]](./)
+[![Watch the video]](Screenrecorder-2025-10-08-22-16-51-641.mp4)
 
 
 ---
