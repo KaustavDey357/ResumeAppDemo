@@ -5,13 +5,21 @@ A simple Flutter application that displays a generated resume and shows the user
 This project uses **Riverpod** for state management, a `GetLocation` widget for obtaining the user’s location, and a `resumeProvider` to fetch user data.
 
 ---
+**Important Note**
+The Resume Demo App is uploaded as a zip file and needs to be extracted to avail all of the file . *Do remember to clone the repo and extract the Resume Demo App file   .* 
+
+---
 
 ## 🚀 Getting Started
 
-1. **Clone the repository:**
+1. **Clone the repository and Extract the Zip File:**
    ```bash
    git clone https://github.com/KaustavDey357/ResumeAppDemo.git
+   ```
+Extarct the Zip File , then:- 
+  ```
    cd ResumeAppDemo
+```
 
 2. **Install dependencies:**
 
